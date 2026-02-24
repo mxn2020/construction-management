@@ -1,79 +1,94 @@
-# Construction Project Management Platform
+# Construction Project Management
 
-## Pages & Features
+Comprehensive construction project tracking and management platform.
 
-### 1. Dashboard
-- Active projects overview with status indicators
-- Budget vs. actual spend summary
-- Milestone completion timeline
-- Safety incident count
-- Weather alerts for project sites
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
 
-### 2. Projects
-- Project list with status, client, location filters
-- Create / edit project (name, client, location, start/end date, budget)
-- Project detail page: scope, phases, team, documents
-- Project timeline (Gantt chart view)
-- Progress photos & site updates
+## Tech Stack
 
-### 3. Work Breakdown Structure (WBS)
-- Define phases, tasks, and sub-tasks
-- Task dependencies & critical path
-- Assign tasks to teams / subcontractors
-- Percent-complete tracking per task
-- Drag-and-drop scheduling
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
 
-### 4. Budget & Costs
-- Budget allocation by category (labor, materials, equipment)
-- Cost tracking with actual-vs-budget comparison
-- Change orders & cost impact
-- Invoice tracking per vendor / subcontractor
-- Cash flow forecast chart
+## Getting Started
 
-### 5. Documents
-- Document repository per project
-- Version control for drawings, specs, contracts
-- Markup / annotation on drawings
-- RFI (Request for Information) management
-- Submittal tracking
+```bash
+npm install
+cp .env.example .env.local
+# Set VITE_CONVEX_URL to your deployment URL
+npm run dev
+```
 
-### 6. Team & Subcontractors
-- Team directory with roles & certifications
-- Subcontractor registry with trade & rating
-- Daily crew assignment
-- Timesheet / hours tracking on-site
-- Contact management
+## License
 
-### 7. Daily Logs
-- Daily site report (weather, crew, equipment, work performed)
-- Photo / video attachments
-- Issue / delay reporting
-- Visitor log
-- Inspection notes
+MIT © Mehdi Nabhani
 
-### 8. Safety & Compliance
-- Safety checklist templates
-- Incident reporting & investigation
-- OSHA compliance tracking
-- Toolbox talk / safety meeting logs
-- Certificate & license expiry tracking
+---
 
-### 9. Equipment & Materials
-- Equipment inventory & availability
-- Material order tracking
-- Delivery schedule & receiving log
-- Equipment maintenance schedule
+<details>
+<summary>📋 Original Feature Spec</summary>
 
-### 10. Reports
-- Project progress vs. schedule
-- Budget performance
-- Resource utilization
-- Safety incident summary
-- Export as PDF / CSV
+# {{APP_TITLE}}
 
-### 11. Settings
-- Company profile
-- Project templates
-- Approval workflows
-- User roles & permissions
-- Notification preferences
+{{APP_DESCRIPTION}}
+
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
+
+## Tech Stack
+
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 22+
+- A running [shared Convex backend](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Create .env.local with your Convex URL
+cp .env.example .env.local
+# Edit .env.local and set VITE_CONVEX_URL to your deployment URL
+
+# Start the dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run typecheck` | Run TypeScript type checking |
+
+## Project Structure
+
+```
+src/
+  main.tsx              # Entry point with ConvexAuthProvider
+  App.tsx               # Auth routing (Landing vs Dashboard)
+  App.css               # Component styles
+  index.css             # Global styles & design tokens
+  components/
+    Landing.tsx          # Marketing/landing page
+    SignIn.tsx           # Auth form (sign-in/sign-up)
+    Dashboard.tsx        # Authenticated app shell
+api.ts                   # Convex API types (from shared backend)
+```
+
+## License
+
+MIT © Mehdi Nabhani
+
+</details>
